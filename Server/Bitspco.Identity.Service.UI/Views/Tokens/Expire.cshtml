@@ -1,0 +1,33 @@
+﻿<div id="expire" class="modal modal-blue-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-delete"></i> <span class="px-10">منقضی کردن توکن</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <form v-on:submit.prevent="submit">
+                <p>آیا از انقضای توکن با اطلاعات ذکر شده اطمینان دارید ؟</p>
+                <div class="p-5 form-group"><label class="w-10">کلید : </label><input class="form-control" v-model="model.Key" required readonly /></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="p-5 form-group"><label class="w-20">شناسه : </label><input class="form-control" v-model="model.Id" required disabled /></div>
+                        <div class="p-5 form-group" v-if="model.User"><label class="w-20">شناسه : </label><input class="form-control" v-model="model.User.Name" required disabled /></div>
+                        <div class="p-5 form-group"><label class="w-20">زمان ایجاد : </label><input class="form-control" v-model="model.CreationTime" required readonly /></div>
+                        <div class="p-5 form-group"><label class="w-20">زمان انقضا : </label><input class="form-control" v-model="model.ExpireTime" required readonly /></div>
+                        <div class="p-5 form-group"><label class="w-20">توضیحات : </label><input class="form-control" v-model="model.Icon" required readonly /></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-5 form-group"><label class="w-20">کد تاییدیه : </label><input class="form-control" v-model="model.Icon" required readonly /></div>
+                        <div class="p-5 form-group"><label class="w-20">زمان تایید : </label><input class="form-control" v-model="model.Icon" required readonly /></div>
+                        <div class="p-5 form-group"><label class="w-20">نیاز به تاییدیه : </label><input class="form-control" v-model="model.Icon" required readonly /></div>
+                        <div class="p-5 form-group"><label class="w-20">وضعیت : </label><input class="form-control" v-model="StatusName" required readonly /></div>
+                        <div class="p-5 flex">
+                            <button class="btn btn-blue mx-5 flex-1" autofocus>بله</button>
+                            <a class="btn btn-red mx-5 flex-1" href="#">انصراف</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

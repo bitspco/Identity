@@ -1,0 +1,34 @@
+﻿<div id="apps" class="modal modal-violet">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-account-multiple-outline"></i> <span class="px-10">لیست برنامه ها</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <table class="table striped bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 70px">شناسه</th>
+                        <th>شناسه کاربر</th>
+                        <th>کاربر</th>
+                        <th>نام</th>
+                        <th>دسترسی داده شده به</th>
+                        <th>شناسه کاربر هدف</th>
+                        <th>کاربر هدف</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.ThirdPartyApp.Id}}</td>
+                        <td>{{item.ThirdPartyApp.UserId}}</td>
+                        <td>{{item.ThirdPartyApp.User.Name}}</td>
+                        <td>{{item.ThirdPartyApp.Name}}</td>
+                        <td>{{item.ThirdPartyApp.AccessGivenTo}}</td>
+                        <td>{{item.User.Id}}</td>
+                        <td>{{item.User.Name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

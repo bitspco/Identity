@@ -1,0 +1,68 @@
+﻿html {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../Images/login.jpg);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 350px;
+    position: relative;
+    border-radius: 7px;
+    border: 1px solid #2c2c2c;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    @media (min-height: 500px) {
+        margin-top: -200px;
+    }
+
+    h2 {
+        color: #eee !important;
+    }
+
+    hr {
+        border-color: #d2d2d2 !important;
+    }
+
+    label {
+        color: #eee !important;
+    }
+
+    input {
+        background-color: #efefef !important;
+    }
+
+    a {
+        color: #ccc !important;
+    }
+
+    p {
+        color: #b42424;
+    }
+
+    .progress {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}

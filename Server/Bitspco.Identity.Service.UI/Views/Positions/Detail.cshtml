@@ -1,0 +1,14 @@
+﻿<div id="detail" class="modal modal-orange">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-pencil-off"></i> <span class="px-10">جزئیات</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body">
+            <div class="p-5 form-group"><label class="w-20">شناسه : </label><input class="form-control" v-model="model.Id" required disabled /></div>
+            <div class="p-5 form-group" v-if="model.Parent"><label class="w-20">موقعیت پدر : </label><input class="form-control" v-model="model.Parent.Name" disabled required /></div>
+            <div class="p-5 form-group"><label class="w-20">نام : </label><input class="form-control" v-model="model.Name" required readonly /></div>
+            <div class="p-5"><a class="btn btn-red mx-5 w-100" href="#" autofocus>بستن</a></div>
+        </div>
+    </div>
+</div>

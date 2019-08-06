@@ -1,0 +1,28 @@
+﻿<div id="thirdPartyAccesses" class="modal modal-gray-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-approval"></i> <span class="px-10">دسترسی های خارجی</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <table class="table striped bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 70px">شناسه</th>
+                        <th>نام</th>
+                        <th>نماد</th>
+                        <th>وضعیت</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.Id}}</td>
+                        <td>{{item.Name}}</td>
+                        <td>{{item.Symbol}}</td>
+                        <td>{{item.GetStatusName()}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿@charset "UTF-8";
+$screens: (
+    ('xxs',0),
+    ('xs',544px),
+    ('sm',768px),
+    ('md',992px),
+    ('lg',1300px),
+    ('xl',1600px),
+    ('xxl',1900px)
+);
+$yellow: #f0ad4e;
+$orange: #e57d21;
+$red: #da5546;
+$turquise: #41c1a8;
+$green: #4fc782;
+$sky: #5bc0de;
+$blue: #2d85d0;
+$violet: #945cab;
+$black: #33485d;
+$gray: #849495;
+$white: #fff;
+
+$colors: (
+    ("yellow",$yellow,#fff),
+    ("orange",$orange,#fff),
+    ("red",$red,#fff),
+    ("turquise",$turquise,#fff),
+    ("green",$green,#fff),
+    ("sky",$sky,#fff),
+    ("blue",$blue,#fff),
+    ("violet",$violet,#fff),
+    ("black",$black,#fff),
+    ("gray",$gray,#fff),
+    ("white",$white,#757575),
+);

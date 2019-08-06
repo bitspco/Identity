@@ -1,0 +1,48 @@
+﻿
+@import "../Plugins/sigma/variables.scss";
+
+.d-card {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        flex: 1;
+        color: #fff;
+        padding: 10px 20px;
+
+        h3 {
+            color: inherit;
+            font-weight: inherit;
+        }
+    }
+
+    .bottom {
+        height: 40px;
+        display: flex;
+        padding: 0 10px;
+        font-size: 13px;
+        align-items: center;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, .2);
+
+        a {
+            color: rgba(255, 255, 255, 0.47);
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    @each $color in $colors {
+        $name: nth($color,1);
+        $value: nth($color,2);
+        $forecolor: nth($color,3);
+
+        &.d-card-#{$name} {
+            background-color: $value;
+        }
+    }
+}

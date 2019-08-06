@@ -1,0 +1,30 @@
+﻿<div id="events" class="modal modal-turquise-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-email-outline"></i> <span class="px-10">لیست رویدادها</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <table class="table striped bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 70px">شناسه</th>
+                        <th>شرح</th>
+                        <th>نوع</th>
+                        <th>سطح رویداد</th>
+                        <th>وضعیت</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.Id}}</td>
+                        <td>{{item.Message}}</td>
+                        <td>{{item.Type}}</td>
+                        <td>{{item.Level}}</td>
+                        <td>{{item.Permission.GetStatusName()}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

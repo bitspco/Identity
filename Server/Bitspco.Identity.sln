@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Business", "Bitspco.Identity.Business\Bitspco.Identity.Business.csproj", "{F7FABEFE-0D73-4E2C-824A-3136C2283AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Client", "Bitspco.Identity.Client\Bitspco.Identity.Client.csproj", "{83645343-EC2E-4F45-8ABB-5499858B00F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Client.Test", "Bitspco.Identity.Client.Test\Bitspco.Identity.Client.Test.csproj", "{1028B5DD-B180-44E5-9D65-BF222ED27B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Common", "Bitspco.Identity.Common\Bitspco.Identity.Common.csproj", "{F9BC6895-EBBB-4F23-8046-F1F180946EF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Data", "Bitspco.Identity.Data\Bitspco.Identity.Data.csproj", "{B73A1468-913C-4971-B30E-54B5DCEA68AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Data.Common", "Bitspco.Identity.Data.Common\Bitspco.Identity.Data.Common.csproj", "{04EF754D-5B75-4035-9579-2058B73FC756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Facade", "Bitspco.Identity.Facade\Bitspco.Identity.Facade.csproj", "{DA686A0D-76C8-49D1-92D1-FCC752C8F685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Service.Scheduler", "Bitspco.Identity.Service.Scheduler\Bitspco.Identity.Service.Scheduler.csproj", "{606054D4-D631-43D5-A66D-0FFEF11C3EA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Service.UI", "Bitspco.Identity.Service.UI\Bitspco.Identity.Service.UI.csproj", "{DF3B66BE-4B91-49C3-BD91-016361A834B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitspco.Identity.Service.WebApi", "Bitspco.Identity.Service.WebApi\Bitspco.Identity.Service.WebApi.csproj", "{7E3033BC-29FB-442D-84FB-18FBF661C0B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7FABEFE-0D73-4E2C-824A-3136C2283AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FABEFE-0D73-4E2C-824A-3136C2283AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FABEFE-0D73-4E2C-824A-3136C2283AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FABEFE-0D73-4E2C-824A-3136C2283AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83645343-EC2E-4F45-8ABB-5499858B00F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83645343-EC2E-4F45-8ABB-5499858B00F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83645343-EC2E-4F45-8ABB-5499858B00F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83645343-EC2E-4F45-8ABB-5499858B00F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1028B5DD-B180-44E5-9D65-BF222ED27B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1028B5DD-B180-44E5-9D65-BF222ED27B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1028B5DD-B180-44E5-9D65-BF222ED27B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1028B5DD-B180-44E5-9D65-BF222ED27B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BC6895-EBBB-4F23-8046-F1F180946EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BC6895-EBBB-4F23-8046-F1F180946EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BC6895-EBBB-4F23-8046-F1F180946EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BC6895-EBBB-4F23-8046-F1F180946EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73A1468-913C-4971-B30E-54B5DCEA68AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73A1468-913C-4971-B30E-54B5DCEA68AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73A1468-913C-4971-B30E-54B5DCEA68AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73A1468-913C-4971-B30E-54B5DCEA68AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04EF754D-5B75-4035-9579-2058B73FC756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EF754D-5B75-4035-9579-2058B73FC756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EF754D-5B75-4035-9579-2058B73FC756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EF754D-5B75-4035-9579-2058B73FC756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA686A0D-76C8-49D1-92D1-FCC752C8F685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA686A0D-76C8-49D1-92D1-FCC752C8F685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA686A0D-76C8-49D1-92D1-FCC752C8F685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA686A0D-76C8-49D1-92D1-FCC752C8F685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{606054D4-D631-43D5-A66D-0FFEF11C3EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{606054D4-D631-43D5-A66D-0FFEF11C3EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{606054D4-D631-43D5-A66D-0FFEF11C3EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{606054D4-D631-43D5-A66D-0FFEF11C3EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3B66BE-4B91-49C3-BD91-016361A834B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3B66BE-4B91-49C3-BD91-016361A834B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3B66BE-4B91-49C3-BD91-016361A834B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3B66BE-4B91-49C3-BD91-016361A834B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E3033BC-29FB-442D-84FB-18FBF661C0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E3033BC-29FB-442D-84FB-18FBF661C0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E3033BC-29FB-442D-84FB-18FBF661C0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E3033BC-29FB-442D-84FB-18FBF661C0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55117061-78E0-45AF-A9AC-6FEDE1B13EDA}
+	EndGlobalSection
+EndGlobal

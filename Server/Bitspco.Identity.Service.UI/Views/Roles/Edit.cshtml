@@ -1,0 +1,29 @@
+﻿<div id="edit" class="modal modal-blue-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-lead-pencil"></i> <span class="px-10">ویرایش</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body">
+            <form v-on:submit.prevent="submit">
+                <div class="p-5 form-group"><label class="w-20">شناسه : </label><input class="form-control" v-model="model.Id" required disabled/></div>
+                <div class="p-5 form-group" v-if="model.Module"><label class="w-20">ماژول : </label><input class="form-control" v-model="model.Module.Name" required disabled /></div>
+                <div class="p-5 form-group"><label class="w-20">نام : </label><input class="form-control" v-model="model.Name" required/></div>
+                <div class="p-5 form-group"><label class="w-20">نماد : </label><input class="form-control" v-model="model.Symbol" required/></div>
+                <div class="p-5 form-group">
+                    <label class="w-20">وضعیت : </label>
+                    <select class="form-control" v-model="model.Status" required>
+                        <option v-bind:value="null">انتخاب کنید ...</option>
+                        <option v-for="item in RoleStatuses" v-bind:value="item.Key">
+                            {{ item.Value }}
+                        </option>
+                    </select>
+                </div>
+                <div class="p-5 flex">
+                    <button class="btn btn-blue mx-5 flex-1" autofocus>ثبت</button>
+                    <a class="btn btn-red mx-5 flex-1" href="#">انصراف</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

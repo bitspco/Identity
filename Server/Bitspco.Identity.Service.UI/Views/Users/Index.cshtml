@@ -1,0 +1,24 @@
+﻿<h2>لیست کاربران</h2>
+<hr />
+<div id="grid"></div>
+@{
+    Html.RenderPartial("Create");
+    Html.RenderPartial("Detail");
+    Html.RenderPartial("Edit");
+    Html.RenderPartial("Delete");
+
+    Html.RenderPartial("Parents");
+    Html.RenderPartial("Members");
+    Html.RenderPartial("Questions");
+    Html.RenderPartial("Permissions");
+    Html.RenderPartial("Roles");
+    Html.RenderPartial("Claims");
+    Html.RenderPartial("Contacts");
+    Html.RenderPartial("Events");
+    Html.RenderPartial("Apps");
+    Html.RenderPartial("Tokens");
+
+}
+@section Scripts {
+    <script src="~/Scripts/Users.js"></script>
+}

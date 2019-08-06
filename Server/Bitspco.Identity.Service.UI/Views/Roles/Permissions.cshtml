@@ -1,0 +1,48 @@
+﻿<div id="permissions" class="modal modal-yellow-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-key-variant"></i> <span class="px-10">لیست مجوز ها</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <form v-on:submit.prevent="add">
+                <div class="flex">
+                    <div class="flex-1">
+                        <div class="form-group">
+                            <label>مجوز : </label>
+                            <select class="form-control" required v-model="model.PermissionId">
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-for="item in permissions" v-bind:value="item.Id" v-if="!items.find(x => x.PermissionId == item.Id)">
+                                    {{item.Name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="px-10">
+                        <button class="btn btn-green-dark">افزودن</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table striped bordered mt-10">
+                <thead>
+                    <tr>
+                        <th style="width: 70px">شناسه</th>
+                        <th>نام</th>
+                        <th>نماد</th>
+                        <th>وضعیت</th>
+                        <th style="width: 25px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.Permission.Id}}</td>
+                        <td>{{item.Permission.Name}}</td>
+                        <td>{{item.Permission.Symbol}}</td>
+                        <td>{{item.Permission.GetStatusName()}}</td>
+                        <td class="controls"><a class="btn btn-red" v-on:click="remove(item.Permission.Id)"><i class="mdi mdi-delete"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

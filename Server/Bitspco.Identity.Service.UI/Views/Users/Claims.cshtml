@@ -1,0 +1,52 @@
+﻿<div id="claims" class="modal modal-violet-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-information-outline"></i> <span class="px-10">لیست اطلاعات سیستمی</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <form v-on:submit.prevent="add">
+                <div class="flex">
+                    <div class="flex-1">
+                        <div class="form-group">
+                            <label>سوال : </label>
+                            <select class="form-control" required v-model="model.ClaimId">
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-for="item in claims" v-bind:value="item.Id" v-if="!items.find(x => x.ClaimId == item.Id)">
+                                    {{item.Name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex-2">
+                        <div class="form-group">
+                            <label>مقدار : </label>
+                            <input class="form-control" required v-model="model.Value" />
+                        </div>
+                    </div>
+                    <div class="px-10">
+                        <button class="btn btn-green-dark">افزودن</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table striped bordered mt-10">
+                <thead>
+                    <tr>
+                        <th style="width: 70px">شناسه</th>
+                        <th>نام</th>
+                        <th>نماد</th>
+                        <th>وضعیت</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.Claim.Id}}</td>
+                        <td>{{item.Claim.Name}}</td>
+                        <td>{{item.Claim.Symbol}}</td>
+                        <td>{{item.Claim.GetStatusName()}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

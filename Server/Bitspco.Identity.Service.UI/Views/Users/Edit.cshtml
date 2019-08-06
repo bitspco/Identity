@@ -1,0 +1,64 @@
+﻿<div id="edit" class="modal modal-blue-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-lead-pencil"></i> <span class="px-10">ویرایش</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <form v-on:submit.prevent="submit">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="p-5 form-group"><label class="w-20">شناسه : </label><input class="form-control" v-model="model.Id" required disabled /></div>
+                        <div class="p-5 form-group"><label class="w-20">نام : </label><input class="form-control" v-model="model.Name" required /></div>
+                        <div class="p-5 form-group"><label class="w-20">نام کاربری : </label><input class="form-control" v-model="model.Username" required /></div>
+                        <div class="p-5 form-group"><label class="w-20">کد ملی : </label><input class="form-control" v-model="model.NationalId" /></div>
+                        <div class="p-5 form-group"><label class="w-20">تاریخ تولد : </label><input class="form-control" type="date" v-model="model.Birthday" /></div>
+                        <div class="p-5 form-group">
+                            <label class="w-20">جنسیت : </label>
+                            <select class="form-control" v-model="model.Gender" required>
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-bind:value="1">مرد</option>
+                                <option v-bind:value="2">زن</option>
+                            </select>
+                        </div>
+                        <div class="p-5 form-group"><label class="w-20">توضیحات : </label><input class="form-control" v-model="model.Description" /></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-5 form-group">
+                            <label class="w-25">موقعیت : </label>
+                            <select class="form-control" v-model="model.PositionId">
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-for="item in positions" v-bind:value="item.Id">
+                                    {{ item.Name }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="p-5 form-group"><label class="w-25">زمان انقضا (دقیقه) : </label><input class="form-control" type="number" v-model="model.Timeout" /></div>
+                        <div class="p-5 form-group"><label class="w-25">حداکثر توکن فعال : </label><input class="form-control" type="number" v-model="model.MaxTokenCount" required /></div>
+                        <div class="p-5 form-group">
+                            <label class="w-25">الزام تغییر پسورد : </label>
+                            <select class="form-control" v-model="model.IsNeedChangePassword" required>
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-bind:value="false">خیر</option>
+                                <option v-bind:value="true">بله</option>
+                            </select>
+                        </div>
+                        <div class="p-5 form-group">
+                            <label class="w-25">وضعیت : </label>
+                            <select class="form-control" v-model="model.Status" required>
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-for="item in UserStatuses" v-bind:value="item.Key">
+                                    {{ item.Value }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="p-5 flex">
+                            <button class="btn btn-blue mx-5 flex-1" autofocus>ثبت</button>
+                            <a class="btn btn-red mx-5 flex-1" href="#">انصراف</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

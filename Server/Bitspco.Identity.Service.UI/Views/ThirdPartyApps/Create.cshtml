@@ -1,0 +1,38 @@
+﻿<div id="create" class="modal modal-green-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-plus"></i> <span class="px-10">افزودن</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body">
+            <form v-on:submit.prevent="submit">
+                <div class="p-5 form-group">
+                    <label class="w-25">کاربر : </label>
+                    <select class="form-control" v-model="model.UserId" required>
+                        <option v-bind:value="null">انتخاب کنید ...</option>
+                        <option v-for="item in users" v-bind:value="item.Id">
+                            {{ item.Name }}
+                        </option>
+                    </select>
+                </div>
+                <div class="p-5 form-group"><label class="w-25">نام : </label><input class="form-control" v-model="model.Name" required /></div>
+                <div class="p-5 form-group"><label class="w-25">آیکون : </label><input class="form-control" v-model="model.Icon" required /></div>
+                <div class="p-5 form-group"><label class="w-25">صفحه اصلی : </label><input class="form-control" v-model="model.HomePage" required /></div>
+                <div class="p-5 form-group"><label class="w-25">مخاطب دسترسی : </label><input class="form-control" v-model="model.AccessGivenTo" required /></div>
+                <div class="p-5 form-group">
+                    <label class="w-25">وضعیت : </label>
+                    <select class="form-control" v-model="model.Status" required>
+                        <option v-bind:value="null">انتخاب کنید ...</option>
+                        <option v-for="item in ThirdPartyAppStatuses" v-bind:value="item.Key">
+                            {{ item.Value }}
+                        </option>
+                    </select>
+                </div>
+                <div class="p-5 flex">
+                    <button class="btn btn-blue mx-5 flex-1" autofocus>ثبت</button>
+                    <a class="btn btn-red mx-5 flex-1" href="#">انصراف</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

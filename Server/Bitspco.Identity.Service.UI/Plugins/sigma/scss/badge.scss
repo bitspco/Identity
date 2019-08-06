@@ -1,0 +1,24 @@
+.badge {
+    border-radius: 5px;
+    padding: 1px 5px 0;
+    font-size: 8px;
+    @each $color in $colors {
+        $name: nth($color,1);
+        $value: nth($color,2);
+        $forecolor: nth($color,3);
+        &.badge-#{$name} { background-color: $value; color: $forecolor !important; }
+        &.badge-#{$name}-dark { background-color: darken($value,10%); color: $forecolor !important; }
+        &.badge-#{$name}-light { background-color: lighten($value,10%); color: $forecolor !important; }
+    }
+    &[position] {
+        position: absolute;
+        &[position="top-right"] {top: 0;right: 0; transform: translate(50%,-25%);}
+        &[position="top-left"] {top: 0;left: 0; transform: translate(-50%,-25%);}
+        &[position="bottom-right"] {bottom: 0; right: 0; transform: translate(50%,25%);}
+        &[position="bottom-left"] {bottom: 0; left: 0; transform: translate(-50%,50%);}
+        &[position="right"] {right: 0; top: 50%; transform: translateY(-50%);}
+        &[position="left"] {left: 0; top: 50%; transform: translateY(-50%);}
+        &[position="top"] {top: 0; left: 50%; transform: translateX(-50%);}
+        &[position="bottom"] {bottom: 0; left: 50%; transform: translateX(-50%);}
+    }
+}

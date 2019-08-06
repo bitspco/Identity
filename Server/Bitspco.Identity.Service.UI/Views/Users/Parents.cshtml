@@ -1,0 +1,48 @@
+﻿<div id="parents" class="modal modal-violet">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi mdi-file-tree"></i> <span class="px-10">لیست سر گروه ها</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <form v-on:submit.prevent="add">
+                <div class="flex">
+                    <div class="flex-1">
+                        <div class="form-group">
+                            <label>کاربر : </label>
+                            <select class="form-control" required v-model="model.BaseId">
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-for="item in users" v-bind:value="item.Id" v-if="!items.find(x => x.BaseId == item.Id) && item.Id != id">
+                                    {{item.Name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="px-10">
+                        <button class="btn btn-green-dark">افزودن</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table striped bordered mt-10">
+                <thead>
+                    <tr>
+                        <th style="width: 70px">شناسه</th>
+                        <th>نام</th>
+                        <th>نام کاربری</th>
+                        <th>وضعیت</th>
+                        <th style="width: 25px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.Base.Id}}</td>
+                        <td>{{item.Base.Name}}</td>
+                        <td>{{item.Base.Username}}</td>
+                        <td>{{item.Base.GetStatusName()}}</td>
+                        <td class="controls"><a class="btn btn-red" v-on:click="remove(item.BaseId)"><i class="mdi mdi-delete"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

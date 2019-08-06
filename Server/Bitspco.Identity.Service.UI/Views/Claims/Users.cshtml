@@ -1,0 +1,52 @@
+﻿<div id="users" class="modal modal-violet-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-account-multiple-outline"></i> <span class="px-10">لیست کاربران زیر مجموعه</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-xs">
+            <form v-on:submit.prevent="add">
+                <div class="flex">
+                    <div class="flex-1">
+                        <div class="form-group">
+                            <label>کاربر : </label>
+                            <select class="form-control" required v-model="model.UserId">
+                                <option v-bind:value="null">انتخاب کنید ...</option>
+                                <option v-for="item in users" v-bind:value="item.Id" v-if="!items.find(x => x.UserId == item.Id)">
+                                    {{item.Name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex-2 form-group">
+                        <label>مقدار : </label>
+                        <input class="form-control" v-model="model.Value" required/>
+                    </div>
+                    <div class="px-10">
+                        <button class="btn btn-green-dark">افزودن</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table striped bordered mt-10">
+                <thead>
+                    <tr>
+                        <th style="width: 50px">شناسه</th>
+                        <th style="width: 100px">شناسه کاربر</th>
+                        <th>نام کاربر</th>
+                        <th>مقدار</th>
+                        <th style="width: 30px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.Id}}</td>
+                        <td>{{item.UserId}}</td>
+                        <td>{{item.User.Name}}</td>
+                        <td>{{item.Value}}</td>
+                        <td class="controls"><a class="btn btn-red" v-on:click="remove(item.UserId)"><i class="mdi mdi-delete"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

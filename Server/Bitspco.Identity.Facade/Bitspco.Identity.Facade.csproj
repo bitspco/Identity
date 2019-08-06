@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA686A0D-76C8-49D1-92D1-FCC752C8F685}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bitspco.Identity.Facade</RootNamespace>
+    <AssemblyName>Bitspco.Identity.Facade</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bitspco.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bitspco.All.1.0.0\lib\net452\Bitspco.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Bitspco.Framework.Filters, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bitspco.All.1.0.0\lib\net452\Bitspco.Framework.Filters.dll</HintPath>
+    </Reference>
+    <Reference Include="BItspco.Framework.Filters.Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bitspco.All.1.0.0\lib\net452\BItspco.Framework.Filters.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Bitspco.Framework.Filters.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bitspco.All.1.0.0\lib\net452\Bitspco.Framework.Filters.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="BItspco.Framework.Filters.Security.AntiDos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bitspco.All.1.0.0\lib\net452\BItspco.Framework.Filters.Security.AntiDos.dll</HintPath>
+    </Reference>
+    <Reference Include="BItspco.Framework.Filters.Security.Authentication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bitspco.All.1.0.0\lib\net452\BItspco.Framework.Filters.Security.Authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="BItspco.Framework.Filters.Security.IP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bitspco.All.1.0.0\lib\net452\BItspco.Framework.Filters.Security.IP.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoIP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoIP.1.0.1\lib\net45\GeoIP.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UAParser, Version=2.1.0.0, Culture=neutral, PublicKeyToken=f7377bf021646069, processorArchitecture=MSIL">
+      <HintPath>..\packages\UAParser.2.1.0.0\lib\net40-Client\UAParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Filters\Authenticator.cs" />
+    <Compile Include="Filters\Logger.cs" />
+    <Compile Include="IdentityController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bitspco.Identity.Business\Bitspco.Identity.Business.csproj">
+      <Project>{F7FABEFE-0D73-4E2C-824A-3136C2283AA9}</Project>
+      <Name>Bitspco.Identity.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bitspco.Identity.Common\Bitspco.Identity.Common.csproj">
+      <Project>{F9BC6895-EBBB-4F23-8046-F1F180946EF5}</Project>
+      <Name>Bitspco.Identity.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bitspco.Identity.Data.Common\Bitspco.Identity.Data.Common.csproj">
+      <Project>{04EF754D-5B75-4035-9579-2058B73FC756}</Project>
+      <Name>Bitspco.Identity.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bitspco.Identity.Data\Bitspco.Identity.Data.csproj">
+      <Project>{B73A1468-913C-4971-B30E-54B5DCEA68AE}</Project>
+      <Name>Bitspco.Identity.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,11 @@
+﻿<h2>لیست توکن ها</h2>
+<hr />
+<div id="grid"></div>
+@{
+    Html.RenderPartial("Detail");
+    Html.RenderPartial("Expire");
+    Html.RenderPartial("Delete");
+}
+@section Scripts {
+    <script src="~/Scripts/Tokens.js"></script>
+}

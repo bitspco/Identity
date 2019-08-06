@@ -1,0 +1,14 @@
+﻿<h2>لیست مجوز ها</h2>
+<hr />
+<div id="grid"></div>
+@{
+    Html.RenderPartial("Create");
+    Html.RenderPartial("Detail");
+    Html.RenderPartial("Edit");
+    Html.RenderPartial("Delete");
+    Html.RenderPartial("Roles");
+    Html.RenderPartial("Users");
+}
+@section Scripts {
+    <script src="~/Scripts/Permissions.js"></script>
+}

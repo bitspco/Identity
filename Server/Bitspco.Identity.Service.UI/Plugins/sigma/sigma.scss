@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+.sigma {
+    @import "scss/typography.scss";
+    @import "scss/progress.scss";
+    @import "scss/dropdown.scss";
+    @import "scss/form.scss";
+    @import "scss/button.scss";
+    @import "scss/responsive.scss";
+    @import "scss/table.scss";
+    @import "scss/pagination.scss";
+    @import "scss/alert.scss";
+    @import "scss/tab.scss";
+    @import "scss/card.scss";
+    @import "scss/badge.scss";
+    @import "scss/modal.scss";
+    @import "scss/animation.scss";
+    @import "scss/helper.scss";
+}

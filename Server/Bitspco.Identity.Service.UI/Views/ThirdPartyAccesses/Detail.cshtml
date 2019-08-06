@@ -1,0 +1,18 @@
+﻿<div id="detail" class="modal modal-orange">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-pencil-off"></i> <span class="px-10">جزئیات</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body">
+            <div class="p-5 form-group"><label class="w-20">شناسه : </label><input class="form-control" v-model="model.Id" required disabled /></div>
+            <div class="p-5 form-group" v-if="model.Module"><label class="w-20">ماژول : </label><input class="form-control" v-model="model.Module.Name" required disabled /></div>
+            <div class="p-5 form-group"><label class="w-20">نام : </label><input class="form-control" v-model="model.Name" required readonly /></div>
+            <div class="p-5 form-group"><label class="w-20">نماد : </label><input class="form-control" v-model="model.Symbol" required readonly /></div>
+            <div class="p-5 form-group"><label class="w-20">توضیحات : </label><input class="form-control" v-model="model.Description" required readonly /></div>
+            <div class="p-5 form-group"><label class="w-20">آیکون : </label><input class="form-control" v-model="model.Icon" required readonly /></div>
+            <div class="p-5 form-group"><label class="w-20">وضعیت : </label><input class="form-control" v-model="StatusName" required readonly /></div>
+            <div class="p-5"><a class="btn btn-red mx-5 w-100" href="#" autofocus>بستن</a></div>
+        </div>
+    </div>
+</div>

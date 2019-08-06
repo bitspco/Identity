@@ -1,0 +1,22 @@
+﻿<div id="delete" class="modal modal-red-dark">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-delete"></i> <span class="px-10">حذف</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body">
+            <form v-on:submit.prevent="submit">
+                <p>آیا از حذف ردیف با اطلاعات ذکر شده اطمینان دارید ؟</p>
+                <div class="p-5 form-group"><label class="w-20">شناسه : </label><input class="form-control" v-model="model.Id" required disabled /></div>
+                <div class="p-5 form-group" v-if="model.Module"><label class="w-20">ماژول : </label><input class="form-control" v-model="model.Module.Name" required disabled /></div>
+                <div class="p-5 form-group"><label class="w-20">نام : </label><input class="form-control" v-model="model.Name" required readonly /></div>
+                <div class="p-5 form-group"><label class="w-20">نماد : </label><input class="form-control" v-model="model.Symbol" required readonly /></div>
+                <div class="p-5 form-group"><label class="w-20">وضعیت : </label><input class="form-control" v-model="StatusName" required readonly /></div>
+                <div class="p-5 flex">
+                    <button class="btn btn-blue mx-5 flex-1" autofocus>بله</button>
+                    <a class="btn btn-red mx-5 flex-1" href="#">انصراف</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

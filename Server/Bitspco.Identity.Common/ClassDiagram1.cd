@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Sigma.Identity.Common.Models.User" Collapsed="true">
+    <Position X="27.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAkSIAUEAwApAACgAUACIAQAAgSIwBYGEAAEADAJACA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Position" />
+      <Property Name="RecoveryEmail" />
+      <Property Name="RecoveryPhone" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Members" />
+      <Property Name="Parents" />
+      <Property Name="Socials" />
+      <Property Name="Claims" />
+      <Property Name="Roles" />
+      <Property Name="Permissions" />
+      <Property Name="Tokens" />
+      <Property Name="Contacts" />
+      <Property Name="Apps" />
+      <Property Name="Questions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.AuthenticatorApp" Collapsed="true">
+    <Position X="26.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\AuthenticatorApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Claim" Collapsed="true">
+    <Position X="21.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAEAAAAAAQAAAAAQAAAAAACAAAAAgCAAACAA=</HashCode>
+      <FileName>Models\Claim.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Module" />
+      <Property Name="ClaimType" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Event" Collapsed="true">
+    <Position X="27.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAEAAAAAAAAAAAAAAgAAAAAAIABAQAAIAAAAQA=</HashCode>
+      <FileName>Models\Event.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Type" />
+      <Property Name="Level" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Module" Collapsed="true">
+    <Position X="19.25" Y="4.75" Width="1.5" />
+    <AssociationLine Name="Status" Type="Sigma.Identity.Common.Enums.ModuleStatus" FixedFromPoint="true">
+      <Path>
+        <Point X="19.625" Y="5.312" />
+        <Point X="19.625" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACIAAEAAAAAAAAAAACAAQAAgAAAAAAEAAAQBEgCCA=</HashCode>
+      <FileName>Models\Module.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Roles" />
+      <Property Name="Permissions" />
+      <Property Name="Claims" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Permission" Collapsed="true">
+    <Position X="21.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACACAEAAAAAAAAAAACAAQAAgAAAAAAAAAACAAACAA=</HashCode>
+      <FileName>Models\Permission.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Module" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+      <Property Name="Roles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Position" Collapsed="true">
+    <Position X="30" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACACAAAAAAAAAAAAAAQAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Position.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Question" Collapsed="true">
+    <Position X="30" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAQAAAAAAAAAAAAAAAAAAAAAAAACBAAAAA=</HashCode>
+      <FileName>Models\Question.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="UserSecurityQuestions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Role" Collapsed="true">
+    <Position X="22.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgCACAEAAAAAAAAAAAAAAQAAAAAAAQAEAAECBAICAA=</HashCode>
+      <FileName>Models\Role.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Module" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+      <Property Name="Permissions" />
+      <Property Name="Members" />
+      <Property Name="Parents" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Social" Collapsed="true">
+    <Position X="19.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACACAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Social.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.ThirdPartyApp" Collapsed="true">
+    <Position X="30" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAADBAAEAAAAAAAIAAAAAAwAAAAAAAAAAAAAAAUAAAA=</HashCode>
+      <FileName>Models\ThirdPartyApp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Accesses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.Token" Collapsed="true">
+    <Position X="30" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEDAAAEAAAAAgQAAAEAAAgEAAAgAAEAAAAAgAgAIAA=</HashCode>
+      <FileName>Models\Token.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Usages" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.UserSocial" Collapsed="true">
+    <Position X="24.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEADAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAEAIA=</HashCode>
+      <FileName>Models\Users\UserSocial.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Social" />
+      <Property Name="Visibility" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.UserRole" Collapsed="true">
+    <Position X="24.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Users\UserRole.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Role" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.UserQuestion" Collapsed="true">
+    <Position X="30" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAgQAAAA=</HashCode>
+      <FileName>Models\Users\UserQuestion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Question" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.UserPermission" Collapsed="true">
+    <Position X="24.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAEAAgAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Users\UserPermission.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Permission" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.UserMember" Collapsed="true">
+    <Position X="27.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAIAAAACAAAAAAAQAA=</HashCode>
+      <FileName>Models\Users\UserMember.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Base" />
+      <Property Name="Member" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.UserContact" Collapsed="true">
+    <Position X="24.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAwAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Models\Users\UserContact.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.UserApp" Collapsed="true">
+    <Position X="28.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAgAAAAAAAAAAgAAAEAAAAAAQAAAAAAAQg=</HashCode>
+      <FileName>Models\Users\UserApp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AuthenticatorApp" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.TokenUsage" Collapsed="true">
+    <Position X="30" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>Models\Tokens\TokenUsage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Token" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.ThirdPartyAppAccess" Collapsed="true">
+    <Position X="18.5" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAgAAAAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ThirdPartyApps\ThirdPartyAppAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.ThirdPartyAccess" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEEAAAhAAAAAAAAAAQAAAAAAAAAAAAACAEACAA=</HashCode>
+      <FileName>Models\ThirdPartyApps\ThirdPartyAccess.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Module" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Apps" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.RolePermission" Collapsed="true">
+    <Position X="21.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAEAAEAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Roles\RolePermission.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Role" />
+      <Property Name="Permission" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.RoleMember" Collapsed="true">
+    <Position X="22.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAIAAAACAAAAAAAQAA=</HashCode>
+      <FileName>Models\Roles\RoleMember.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Base" />
+      <Property Name="Member" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sigma.Identity.Common.Models.ClaimValue" Collapsed="true">
+    <Position X="27.5" Y="7.25" Width="1.5" />
+    <AssociationLine Name="Claim" Type="Sigma.Identity.Common.Models.Claim" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="27.5" Y="7.531" />
+        <Point X="27.458" Y="7.531" Type="JumpStart" />
+        <Point X="27.229" Y="7.531" Type="JumpEnd" />
+        <Point X="26.958" Y="7.531" Type="JumpStart" />
+        <Point X="26.792" Y="7.531" Type="JumpEnd" />
+        <Point X="26.25" Y="7.531" />
+        <Point X="26.25" Y="7" />
+        <Point X="23.521" Y="7" Type="JumpStart" />
+        <Point X="23.354" Y="7" Type="JumpEnd" />
+        <Point X="23.083" Y="7" Type="JumpStart" />
+        <Point X="22.917" Y="7" Type="JumpEnd" />
+        <Point X="22.865" Y="7" Type="JumpStart" />
+        <Point X="22.698" Y="7" Type="JumpEnd" />
+        <Point X="22.646" Y="7" Type="JumpStart" />
+        <Point X="22.479" Y="7" Type="JumpEnd" />
+        <Point X="22" Y="7" />
+        <Point X="22" Y="4.687" />
+        <Point X="22.188" Y="4.687" />
+        <Point X="22.188" Y="4.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAADIAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Claims\ClaimValue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Claim" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Sigma.Identity.Common.Enums.UserSocialVisibility" Collapsed="true">
+    <Position X="24.25" Y="12.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAQAA=</HashCode>
+      <FileName>Enums\UserSocialVisibility.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.UserContactType" Collapsed="true">
+    <Position X="27.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAEAAAA=</HashCode>
+      <FileName>Enums\UserContactType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.RoleStatus" Collapsed="true">
+    <Position X="19.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\RoleStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.ThirdPartyAppAccessStatus" Collapsed="true">
+    <Position X="18.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\ThirdPartyAppAccessStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.EventLevel" Collapsed="true">
+    <Position X="30" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\EventLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.EventStatus" Collapsed="true">
+    <Position X="27.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAEAEAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\EventStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.EventType" Collapsed="true">
+    <Position X="23.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAEAAAA=</HashCode>
+      <FileName>Enums\EventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.ClaimStatus" Collapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\ClaimStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.ClaimType" Collapsed="true">
+    <Position X="24.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAEAAAAAAAAAAAAQBAAAACAEAAQA=</HashCode>
+      <FileName>Enums\ClaimType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.PermissionStatus" Collapsed="true">
+    <Position X="21.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\PermissionStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sigma.Identity.Common.Enums.ModuleStatus" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\ModuleStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

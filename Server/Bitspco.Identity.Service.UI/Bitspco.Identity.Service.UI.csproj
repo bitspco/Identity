@@ -1,0 +1,383 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF3B66BE-4B91-49C3-BD91-016361A834B7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bitspco.Identity.Service.UI</RootNamespace>
+    <AssemblyName>Bitspco.Identity.Service.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\lock.jpg" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\login.svg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Plugins\chart.js\chart.bundle.min.js" />
+    <Content Include="Plugins\chart.js\chart.min.css" />
+    <Content Include="Plugins\sigma-datatable\sigma-datatable.css" />
+    <None Include="packages.config" />
+    <Content Include="Plugins\sigma-datatable\sigma-datatable.css.map" />
+    <Content Include="Plugins\sigma-datatable\sigma-datatable.js" />
+    <None Include="Plugins\sigma-datatable\sigma-datatable.scss" />
+    <Content Include="Plugins\iransans\iransans.css" />
+    <Content Include="Plugins\jquery\jquery-3.4.1.min.js" />
+    <Content Include="Plugins\material-design\css\materialdesignicons.css" />
+    <Content Include="Plugins\material-design\css\materialdesignicons.min.css" />
+    <Content Include="Plugins\material-design\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Plugins\material-design\preview.html" />
+    <Content Include="Plugins\material-design\scss\materialdesignicons.css" />
+    <Content Include="Plugins\sigma\sigma.css" />
+    <Content Include="Plugins\sigma\sigma.js" />
+    <Content Include="Plugins\sweetalert2\sweetalert2.js" />
+    <Content Include="Plugins\vue.js\axios.min.js" />
+    <Content Include="Plugins\vue.js\vue.min.js" />
+    <Content Include="Scripts\Admin.js" />
+    <Content Include="Scripts\Events.js" />
+    <Content Include="Scripts\Users.js" />
+    <Content Include="Scripts\Tokens.js" />
+    <Content Include="Scripts\ThirdPartyApps.js" />
+    <Content Include="Scripts\ThirdPartyAccesses.js" />
+    <Content Include="Scripts\Roles.js" />
+    <Content Include="Scripts\Questions.js" />
+    <Content Include="Scripts\Positions.js" />
+    <Content Include="Scripts\Permissions.js" />
+    <Content Include="Scripts\Modules.js" />
+    <Content Include="Scripts\AuthenticatorApps.js" />
+    <Content Include="Scripts\Claims.js" />
+    <Content Include="Scripts\Dashboard.js" />
+    <Content Include="Scripts\Lock.js" />
+    <Content Include="Scripts\Auth.js" />
+    <Content Include="Scripts\Models.js" />
+    <Content Include="Scripts\Script.js" />
+    <Content Include="Styles\Lock.scss" />
+    <None Include="Styles\Auth.scss" />
+    <None Include="Styles\Dashboard.scss" />
+    <None Include="Styles\Style.scss" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthenticatorAppsController.cs" />
+    <Compile Include="Controllers\ClaimsController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\ModulesController.cs" />
+    <Compile Include="Controllers\PermissionsController.cs" />
+    <Compile Include="Controllers\PositionsController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\ThirdPartyAccessesController.cs" />
+    <Compile Include="Controllers\ThirdPartyAppsController.cs" />
+    <Compile Include="Controllers\TokensController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Layouts\AdminPanel.cshtml" />
+    <Content Include="Views\Auth\Index.cshtml" />
+    <Content Include="Views\AuthenticatorApps\Index.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\Modules\Index.cshtml" />
+    <Content Include="Views\Permissions\Index.cshtml" />
+    <Content Include="Views\Positions\Index.cshtml" />
+    <Content Include="Views\Questions\Index.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\ThirdPartyAccesses\Index.cshtml" />
+    <Content Include="Views\ThirdPartyApps\Index.cshtml" />
+    <Content Include="Views\Tokens\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Styles\Admin.scss" />
+    <Content Include="Plugins\iransans\eot\IRANSansWeb.eot" />
+    <Content Include="Plugins\iransans\eot\IRANSansWeb_Black.eot" />
+    <Content Include="Plugins\iransans\eot\IRANSansWeb_Bold.eot" />
+    <Content Include="Plugins\iransans\eot\IRANSansWeb_Light.eot" />
+    <Content Include="Plugins\iransans\eot\IRANSansWeb_Medium.eot" />
+    <Content Include="Plugins\iransans\eot\IRANSansWeb_UltraLight.eot" />
+    <Content Include="Plugins\iransans\ttf\IRANSansWeb.ttf" />
+    <Content Include="Plugins\iransans\ttf\IRANSansWeb_Black.ttf" />
+    <Content Include="Plugins\iransans\ttf\IRANSansWeb_Bold.ttf" />
+    <Content Include="Plugins\iransans\ttf\IRANSansWeb_Light.ttf" />
+    <Content Include="Plugins\iransans\ttf\IRANSansWeb_Medium.ttf" />
+    <Content Include="Plugins\iransans\ttf\IRANSansWeb_UltraLight.ttf" />
+    <Content Include="Plugins\iransans\woff2\IRANSansWeb.woff2" />
+    <Content Include="Plugins\iransans\woff2\IRANSansWeb_Black.woff2" />
+    <Content Include="Plugins\iransans\woff2\IRANSansWeb_Bold.woff2" />
+    <Content Include="Plugins\iransans\woff2\IRANSansWeb_Light.woff2" />
+    <Content Include="Plugins\iransans\woff2\IRANSansWeb_Medium.woff2" />
+    <Content Include="Plugins\iransans\woff2\IRANSansWeb_UltraLight.woff2" />
+    <Content Include="Plugins\iransans\woff\IRANSansWeb.woff" />
+    <Content Include="Plugins\iransans\woff\IRANSansWeb_Black.woff" />
+    <Content Include="Plugins\iransans\woff\IRANSansWeb_Bold.woff" />
+    <Content Include="Plugins\iransans\woff\IRANSansWeb_Light.woff" />
+    <Content Include="Plugins\iransans\woff\IRANSansWeb_Medium.woff" />
+    <Content Include="Plugins\iransans\woff\IRANSansWeb_UltraLight.woff" />
+    <Content Include="Plugins\material-design\css\materialdesignicons.css.map" />
+    <Content Include="Plugins\material-design\css\materialdesignicons.min.css.map" />
+    <Content Include="Plugins\material-design\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Plugins\material-design\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Plugins\material-design\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Plugins\material-design\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Plugins\material-design\scss\materialdesignicons.css.map" />
+    <Content Include="Plugins\material-design\scss\materialdesignicons.scss" />
+    <Content Include="Plugins\material-design\scss\_animated.scss" />
+    <Content Include="Plugins\material-design\scss\_core.scss" />
+    <Content Include="Plugins\material-design\scss\_extras.scss" />
+    <Content Include="Plugins\material-design\scss\_functions.scss" />
+    <Content Include="Plugins\material-design\scss\_icons.scss" />
+    <Content Include="Plugins\material-design\scss\_path.scss" />
+    <Content Include="Plugins\material-design\scss\_variables.scss" />
+    <Content Include="Plugins\sigma\sigma.scss" />
+    <Content Include="Plugins\sigma\scss\alert.scss" />
+    <Content Include="Plugins\sigma\scss\animation.scss" />
+    <Content Include="Plugins\sigma\scss\badge.scss" />
+    <Content Include="Plugins\sigma\scss\button.scss" />
+    <Content Include="Plugins\sigma\scss\card.scss" />
+    <Content Include="Plugins\sigma\scss\dropdown.scss" />
+    <Content Include="Plugins\sigma\scss\form.scss" />
+    <Content Include="Plugins\sigma\scss\form\checkbox.scss" />
+    <Content Include="Plugins\sigma\scss\form\form-control.scss" />
+    <Content Include="Plugins\sigma\scss\form\form-group.scss" />
+    <Content Include="Plugins\sigma\scss\form\input-group.scss" />
+    <Content Include="Plugins\sigma\scss\form\radio.scss" />
+    <Content Include="Plugins\sigma\scss\form\switch.scss" />
+    <Content Include="Plugins\sigma\scss\helper.scss" />
+    <Content Include="Plugins\sigma\scss\pagination.scss" />
+    <Content Include="Plugins\sigma\scss\progress.scss" />
+    <Content Include="Plugins\sigma\scss\responsive.scss" />
+    <Content Include="Plugins\sigma\scss\tab.scss" />
+    <Content Include="Plugins\sigma\scss\table.scss" />
+    <Content Include="Plugins\sigma\scss\typography.scss" />
+    <Content Include="Plugins\sigma\variables.scss" />
+    <Content Include="Plugins\sigma\sigma.css.map" />
+    <Content Include="Plugins\sigma\scss\modal.scss" />
+    <Content Include="Views\AuthenticatorApps\Create.cshtml" />
+    <Content Include="Views\AuthenticatorApps\Edit.cshtml" />
+    <Content Include="Views\AuthenticatorApps\Detail.cshtml" />
+    <Content Include="Views\AuthenticatorApps\Delete.cshtml" />
+    <Content Include="Views\Claims\Index.cshtml" />
+    <Content Include="Views\Claims\Create.cshtml" />
+    <Content Include="Views\Claims\Delete.cshtml" />
+    <Content Include="Views\Claims\Detail.cshtml" />
+    <Content Include="Views\Claims\Edit.cshtml" />
+    <Content Include="Views\Events\Detail.cshtml" />
+    <Content Include="Views\Modules\Create.cshtml" />
+    <Content Include="Views\Modules\Delete.cshtml" />
+    <Content Include="Views\Modules\Detail.cshtml" />
+    <Content Include="Views\Modules\Edit.cshtml" />
+    <Content Include="Views\Permissions\Create.cshtml" />
+    <Content Include="Views\Permissions\Delete.cshtml" />
+    <Content Include="Views\Permissions\Detail.cshtml" />
+    <Content Include="Views\Permissions\Edit.cshtml" />
+    <Content Include="Views\Positions\Create.cshtml" />
+    <Content Include="Views\Positions\Delete.cshtml" />
+    <Content Include="Views\Positions\Detail.cshtml" />
+    <Content Include="Views\Positions\Edit.cshtml" />
+    <Content Include="Views\Questions\Create.cshtml" />
+    <Content Include="Views\Questions\Delete.cshtml" />
+    <Content Include="Views\Questions\Detail.cshtml" />
+    <Content Include="Views\Questions\Edit.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Roles\Detail.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\ThirdPartyAccesses\Create.cshtml" />
+    <Content Include="Views\ThirdPartyAccesses\Delete.cshtml" />
+    <Content Include="Views\ThirdPartyAccesses\Detail.cshtml" />
+    <Content Include="Views\ThirdPartyAccesses\Edit.cshtml" />
+    <Content Include="Views\ThirdPartyApps\Create.cshtml" />
+    <Content Include="Views\ThirdPartyApps\Delete.cshtml" />
+    <Content Include="Views\ThirdPartyApps\Detail.cshtml" />
+    <Content Include="Views\ThirdPartyApps\Edit.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Detail.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Tokens\Delete.cshtml" />
+    <Content Include="Views\Tokens\Detail.cshtml" />
+    <Content Include="Views\Modules\Roles.cshtml" />
+    <Content Include="Views\Modules\Claims.cshtml" />
+    <Content Include="Views\Modules\Permissions.cshtml" />
+    <Content Include="Views\Modules\ThirdPartyAccesses.cshtml" />
+    <Content Include="Views\Roles\Permissions.cshtml" />
+    <Content Include="Views\Roles\Parents.cshtml" />
+    <Content Include="Views\Roles\Users.cshtml" />
+    <Content Include="Views\Roles\Members.cshtml" />
+    <Content Include="Views\Permissions\Roles.cshtml" />
+    <Content Include="Views\Permissions\Users.cshtml" />
+    <Content Include="Views\Users\Permissions.cshtml" />
+    <Content Include="Views\Users\Roles.cshtml" />
+    <Content Include="Views\Users\Contacts.cshtml" />
+    <Content Include="Views\Users\Tokens.cshtml" />
+    <Content Include="Views\Users\Questions.cshtml" />
+    <Content Include="Views\Users\Members.cshtml" />
+    <Content Include="Views\Users\Events.cshtml" />
+    <Content Include="Views\Users\Claims.cshtml" />
+    <Content Include="Views\Users\Apps.cshtml" />
+    <Content Include="Views\Users\Parents.cshtml" />
+    <Content Include="Views\Positions\Users.cshtml" />
+    <Content Include="Views\Questions\Users.cshtml" />
+    <Content Include="Views\AuthenticatorApps\Users.cshtml" />
+    <Content Include="Views\ThirdPartyApps\Accesses.cshtml" />
+    <Content Include="Views\ThirdPartyAccesses\Apps.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Auth\Lock.cshtml" />
+    <Content Include="Views\Tokens\Expire.cshtml" />
+    <Content Include="Views\Claims\Users.cshtml" />
+    <Content Include="Views\Users\Profile.cshtml" />
+    <Content Include="Views\Settings\Index.cshtml" />
+    <Content Include="Views\Reports\Status.cshtml" />
+    <Content Include="Views\Reports\OnlineUsers.cshtml" />
+    <Content Include="Views\Reports\LoginLogout.cshtml" />
+    <Content Include="Views\Reports\UsersRequests.cshtml" />
+    <Content Include="Views\Reports\IOs.cshtml" />
+    <Content Include="Views\Reports\MethodsCalls.cshtml" />
+    <Content Include="Views\Reports\Authentication.cshtml" />
+    <Content Include="Views\Reports\DDos.cshtml" />
+    <Content Include="Views\Reports\IP.cshtml" />
+    <Content Include="Views\Reports\TokenUsage.cshtml" />
+    <Content Include="Views\Reports\Sql.cshtml" />
+    <Content Include="Views\Reports\XSS.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62211</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62211/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

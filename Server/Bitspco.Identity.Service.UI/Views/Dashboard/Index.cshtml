@@ -1,0 +1,66 @@
+﻿
+@section Styles {
+    <link href="~/Styles/dashboard.css" rel="stylesheet" />
+    <link href="~/Plugins/chart.js/chart.min.css" rel="stylesheet" />
+}
+@section Scripts {
+    <script src="~/Plugins/chart.js/chart.bundle.min.js"></script>
+    <script src="~/Scripts/Dashboard.js"></script>
+}
+<div class="flex">
+    <div class="flex-1 p-10">
+        <div class="d-card d-card-green">
+            <div class="top">
+                <h3>ماژول ها : <span>1</span></h3>
+            </div>
+            <div class="bottom">
+                <a href="/Modules">نمایش همه<i class="mdi mdi-chevron-left"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1 p-10">
+        <div class="d-card d-card-red">
+            <div class="top">
+                <h3>نقش ها : <span>1</span></h3>
+            </div>
+            <div class="bottom">
+                <a href="/Roles">نمایش همه<i class="mdi mdi-chevron-left"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1 p-10">
+        <div class="d-card d-card-blue">
+            <div class="top">
+                <h3>مجوز ها : <span>1</span></h3>
+            </div>
+            <div class="bottom">
+                <a href="/Permissions">نمایش همه<i class="mdi mdi-chevron-left"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1 p-10">
+        <div class="d-card d-card-orange">
+            <div class="top">
+                <h3>اطلاعات سیستمی : <span>1</span></h3>
+            </div>
+            <div class="bottom">
+                <a href="/Claims">نمایش همه<i class="mdi mdi-chevron-left"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1 p-10">
+        <div class="d-card d-card-green">
+            <div class="top">
+                <h3>کاربران : <span>1</span></h3>
+            </div>
+            <div class="bottom">
+                <a href="/Users">نمایش همه<i class="mdi mdi-chevron-left"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 p-20">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+</div>

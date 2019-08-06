@@ -1,0 +1,13 @@
+﻿<h2>نرم افزار های خارجی</h2>
+<hr />
+<div id="grid"></div>
+@{
+    Html.RenderPartial("Create");
+    Html.RenderPartial("Detail");
+    Html.RenderPartial("Edit");
+    Html.RenderPartial("Delete");
+    Html.RenderPartial("Accesses");
+}
+@section Scripts {
+    <script src="~/Scripts/ThirdPartyApps.js"></script>
+}

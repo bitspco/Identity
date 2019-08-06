@@ -1,0 +1,32 @@
+﻿<div id="tokens" class="modal modal-black">
+    <div>
+        <div class="header">
+            <div class="title"><i class="mdi mdi-account-key"></i> <span class="px-10">لیست توکن ها</span></div>
+            <div class="close"><a href="#">✖</a></div>
+        </div>
+        <div class="body container-sm">
+            <table class="table striped bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 70px">شناسه</th>
+                        <th>کلید</th>
+                        <th>زمان ایجاد</th>
+                        <th>زمان انقضا</th>
+                        <th>وضعیت</th>
+                        <th style="width: 25px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td>{{item.Id}}</td>
+                        <td>{{item.Key}}</td>
+                        <td>{{item.CreationTime}}</td>
+                        <td>{{item.ExpireTime}}</td>
+                        <td>{{item.GetStatusName()}}</td>
+                        <td class="controls"><a class="btn btn-blue-dark" v-if="item.Status != 1" v-on:click="expire(item.Id)"><i class="mdi mdi-sleep"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

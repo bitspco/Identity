@@ -1,0 +1,91 @@
+.rtl,.rtl * {direction: rtl;}
+.ltr,.ltr * {direction: ltr;}
+
+.pos-relative {position: relative;}
+.pos-absolute {position: absolute;}
+.pos-fixed {position: fixed;}
+
+.pull-left {float: left;}
+.pull-right {float: right;}
+
+.flex {display: flex;}
+.flex-center {display: flex;justify-content: center;align-items: center;}
+.flex-middle {display: flex;flex-direction: row; justify-content: center;}
+//=========================================================
+
+$upto:100;
+$step:5;
+$i:0; @while $i <= $upto { .m--#{$i} {margin:-#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mx--#{$i} {margin-right:-#{$i}px;margin-left:-#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .my--#{$i} {margin-top:-#{$i}px;margin-bottom:-#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mt--#{$i} {margin-top:-#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mr--#{$i} {margin-right:-#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mb--#{$i} {margin-bottom:-#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .ml--#{$i} {margin-left:-#{$i}px;} $i: $i + $step; }
+
+.m-auto {margin-right:auto;margin-left:auto;}
+
+$i:0; @while $i <= $upto { .m-#{$i} {margin:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mx-#{$i} {margin-right:#{$i}px;margin-left:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .my-#{$i} {margin-top:#{$i}px;margin-bottom:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mt-#{$i} {margin-top:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mr-#{$i} {margin-right:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .mb-#{$i} {margin-bottom:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .ml-#{$i} {margin-left:#{$i}px;} $i: $i + $step; }
+
+$i:0; @while $i <= $upto { .p-#{$i} {padding:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .px-#{$i} {padding-right:#{$i}px;padding-left:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .py-#{$i} {padding-top:#{$i}px;padding-bottom:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .pt-#{$i} {padding-top:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .pr-#{$i} {padding-right:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .pb-#{$i} {padding-bottom:#{$i}px;} $i: $i + $step; }
+$i:0; @while $i <= $upto { .pl-#{$i} {padding-left:#{$i}px;} $i: $i + $step; }
+//====================================================================
+
+$upto:50;
+$step:1;
+$i:6; @while $i <= $upto { .font-#{$i} {font-size:#{$i}px !important;} $i: $i + $step; }
+
+
+.align-left {text-align: left !important;}
+.align-center {text-align: center !important;}
+.align-right {text-align: right !important;}
+.align-justify {text-align: justify !important;}
+
+.text-left {text-align: left !important;}
+.text-center {text-align: center !important;}
+.text-right {text-align: right !important;}
+.text-justify {text-align: justify !important;}
+
+//====================================================================
+$upto:100;
+$step:5;
+$i:0; @while $i <= $upto { .w-#{$i} {width:#{$i+0%}} $i: $i + $step; }
+//====================================================================
+$upto:2000;
+$step:100;
+$i:100; @while $i <= $upto { .animate-#{$i} {animation-duration:#{$i+ms}} $i: $i + $step; }
+//====================================================================
+$upto:5;
+$i:1; @while $i <= $upto { .flex-#{$i} {flex:#{$i};} $i: $i + 1; }
+//====================================================================
+@each $color in $colors {
+    $name: nth($color,1);
+    $value: nth($color,2);
+    .color-#{$name}-light {color: lighten($value,10%) !important;}
+    .color-#{$name} {color: $value !important;}
+    .color-#{$name}-dark {color: darken($value,10%) !important;}
+}
+
+@each $color in $colors {
+    $name: nth($color,1);
+    $value: nth($color,2);
+    $forecolor: nth($color,3);
+    .bg-#{$name}-light {background-color: lighten($value,10%) !important; color:$forecolor !important;}
+    .bg-#{$name} {background-color: $value !important; color:$forecolor !important;}
+    .bg-#{$name}-dark {background-color: darken($value,10%) !important; color:$forecolor !important;} 
+}
+
+.scroll {overflow: auto;}
+.scroll-x {overflow-x: auto;}
+.scroll-y {overflow-y: auto;}

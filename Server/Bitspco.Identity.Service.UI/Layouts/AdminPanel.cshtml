@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="sigma rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="~/Images/logo.png" rel="icon" type="image/png" sizes="16x16">
+    <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
+    <link href="~/Plugins/sigma-datatable/sigma-datatable.css" rel="stylesheet" />
+    <link href="~/Plugins/iransans/iransans.css" rel="stylesheet" />
+    <link href="~/Plugins/sigma/sigma.css" rel="stylesheet" />
+    <link href="~/Plugins/material-design/css/materialdesignicons.css" rel="stylesheet" />
+    <link href="~/Styles/Style.css" rel="stylesheet">
+    <link href="~/Styles/Admin.css" rel="stylesheet" />
+    @RenderSection("Styles", false)
+</head>
+<body class="rtl menu-open iransans">
+    <aside>
+        <div class="logo-info">
+            <div class="logo"><img src="~/Images/logo.png" /></div>
+            <div class="name">سامانۀ احراز هویت</div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/Dashboard"><i class="mdi mdi-speedometer"></i><span>داشبورد</span></a></li>
+                <li>
+                    <a class="open"><i class="mdi mdi-format-list-bulleted"></i><span>لیست اطلاعات <i class="mdi mdi-chevron-left"></i></span></a>
+                    <ul>
+                        <li><a class="close"><i class="mdi mdi-arrow-right"></i><span>منوی اصلی</span></a></li>
+                        <li><a href="/Modules"><i class="mdi mdi-hexagon-multiple"></i> <span>لیست ماژول ها</span></a></li>
+                        <li><a href="/Roles"><i class="mdi mdi-chemical-weapon"></i> <span>لیست نقش ها</span></a></li>
+                        <li><a href="/Permissions"><i class="mdi mdi-key-variant"></i> <span>لیست مجوز ها</span></a></li>
+                        <li><a href="/Users"><i class="mdi mdi-account-multiple-outline"></i> <span>لیست کاربران</span></a></li>
+                        <li><a href="/Claims"><i class="mdi mdi-information-outline"></i> <span>لیست اطلاعات سیستم</span></a></li>
+                        <li><a href="/Positions"><i class="mdi mdi-file-tree"></i> <span>لیست موقعیت های شغلی</span></a></li>
+                        <li><a href="/Questions"><i class="mdi mdi-help-circle-outline"></i> <span>لیست سوالات امنیتی</span></a></li>
+                        <li><a href="/AuthenticatorApps"><i class="mdi mdi-cellphone"></i> <span>نرم افزار های احراز هویت</span></a></li>
+                        <li><a href="/ThirdPartyApps"><i class="mdi mdi-apple-keyboard-command"></i> <span>نرم افزار های خارجی</span></a></li>
+                        <li><a href="/ThirdPartyAccesses"><i class="mdi mdi-key"></i> <span>دسترسی های خارجی</span></a></li>
+                        <li><a href="/Events"><i class="mdi mdi-email-outline"></i> <span>لیست رویداد ها</span></a></li>
+                        <li><a href="/Tokens"><i class="mdi mdi-account-key"></i> <span>لیست توکن ها</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="open"><i class="mdi mdi-cloud-print-outline"></i><span>گزارشات <i class="mdi mdi-chevron-left"></i></span></a>
+                    <ul>
+                        <li><a class="close"><i class="mdi mdi-arrow-right"></i><span>منوی اصلی</span></a></li>
+                        <li><a href="/Reports/Status"><i class="mdi mdi-heart-pulse"></i> <span>گزارش وضعیت</span></a></li>
+                        <li><a href="/Reports/Authentication"><i class="mdi mdi-key-change"></i> <span>گزارش دسترسی</span></a></li>
+                        <li><a href="/Reports/DDos"><i class="mdi mdi-chemical-weapon"></i> <span>گزارش حمله DDOS</span></a></li>
+                        <li><a href="/Reports/IOs"><i class="mdi mdi-shuffle"></i> <span>گزارش داده های ورودی خروجی</span></a></li>
+                        <li><a href="/Reports/IP"><i class="mdi mdi-account-multiple-outline"></i> <span>گزارش آی پی</span></a></li>
+                        <li><a href="/Reports/LoginLogout"><i class="mdi mdi-crosshairs-gps"></i> <span>گزارش ورود خروج کاربران</span></a></li>
+                        <li><a href="/Reports/MethodsCalls"><i class="mdi mdi-file-tree"></i> <span>گزارش فراخوانی متدها</span></a></li>
+                        <li><a href="/Reports/OnlineUsers"><i class="mdi mdi-help-circle-outline"></i> <span>گزارش کاربران آنلاین</span></a></li>
+                        <li><a href="/Reports/Sql"><i class="mdi mdi-cellphone"></i> <span>گزارش حمله SQL</span></a></li>
+                        <li><a href="/Reports/TokenUsage"><i class="mdi mdi-key"></i> <span>گزارش استفاده از توکن ها</span></a></li>
+                        <li><a href="/Reports/UsersRequests"><i class="mdi mdi-email-outline"></i> <span>گزارش درخواست کاربران</span></a></li>
+                        <li><a href="/Reports/XSS"><i class="mdi mdi-account-key"></i> <span>گزارش حمله XSS</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="/Settings"><i class="mdi mdi-settings"></i><span>تنظیمات</span></a></li>
+            </ul>
+        </div>
+        <ul class="toolbar">
+            <li class="logout"><a onclick="logout()"><i class="mdi mdi-logout"></i></a></li>
+            <li class="lock"><a onclick="lock()"><i class="mdi mdi-lock"></i></a></li>
+            <li class="profile"><a href="/Users/Profile"><i class="mdi mdi-account"></i></a></li>
+            <li class="settings"><a href="/Settings"><i class="mdi mdi-settings"></i></a></li>
+        </ul>
+    </aside>
+    <main>
+        <nav>
+            <ul class="start">
+                <li class="menu-toggle"><a><i class="mdi mdi-menu"></i></a></li>
+                <li class="help"><a><i class="mdi mdi-help"></i></a></li>
+                <li class="full-screen"><a><i class="mdi mdi-fullscreen"></i></a></li>
+                <li class="full-screen-exit"><a><i class="mdi mdi-fullscreen-exit"></i></a></li>
+                <li class="search"><a><i class="mdi mdi-magnify"></i></a></li>
+            </ul>
+            <ul class="end">
+                <li class="settings"><a href="/Settings"><i class="mdi mdi-settings"></i></a></li>
+                <li class="profile"><a href="/Users/Profile"><i class="mdi mdi-account"></i></a></li>
+                <li class="events"><a><i class="mdi mdi-email-outline"></i></a></li>
+            </ul>
+        </nav>
+        <section>
+            @RenderBody()
+        </section>
+    </main>
+    <div id="help-box">
+        <div class="container-sm p-20">
+            <div class="title">
+                <h2 class="text-center">کلید های کمکی</h2>
+                <a onclick="this.parentNode.parentNode.parentNode.classList.remove('show')" class="close">✖</a>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="key"><span>بسته پنجره</span><a>Esc</a></div>
+                    <div class="key"><span>تمام صفحه</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>M</a></div>
+                    <div class="key"><span>جسنتجو</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>F</a></div>
+                    <hr />
+                    <div class="key"><span>داشبورد</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>D</a></div>
+                    <div class="key"><span>رویداد ها</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>E</a></div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="key"><span>خارج شدن از سیستم</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>O</a></div>
+                    <div class="key"><span>قفل کردن صفحه</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>L</a></div>
+                    <div class="key"><span>تنظیمات</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>S</a></div>
+                    <div class="key"><span>پروفایل کاربری</span><a>Ctrl</a><span>+</span><a>Alt</a><span>+</span><a>P</a></div>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Plugins/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="~/Plugins/sweetalert2/sweetalert2.js"></script>
+    <script src="~/Plugins/vue.js/vue.min.js"></script>
+    <script src="~/Plugins/sigma/sigma.js"></script>
+    <script src="~/Plugins/sigma-datatable/sigma-datatable.js" type="text/javascript"></script>
+    <script src="~/Scripts/Models.js"></script>
+    <script src="~/Scripts/Script.js" type="text/javascript"></script>
+    <script src="~/Scripts/Admin.js"></script>
+    <script>
+        sigmaDataTableConfiguration.rtl = true;
+    </script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

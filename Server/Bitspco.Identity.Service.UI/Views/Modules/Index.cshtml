@@ -1,0 +1,16 @@
+﻿<h2>لیست ماژو ل ها</h2>
+<hr />
+<div id="grid"></div>
+@{
+    Html.RenderPartial("Create");
+    Html.RenderPartial("Detail");
+    Html.RenderPartial("Edit");
+    Html.RenderPartial("Delete");
+    Html.RenderPartial("Roles");
+    Html.RenderPartial("Permissions");
+    Html.RenderPartial("Claims");
+    Html.RenderPartial("ThirdPartyAccesses");
+}
+@section Scripts {
+    <script src="~/Scripts/Modules.js"></script>
+}

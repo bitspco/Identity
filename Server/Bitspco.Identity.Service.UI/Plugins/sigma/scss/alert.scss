@@ -1,0 +1,28 @@
+.alert {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #505050;
+    font-size: 13px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 10px;
+    box-sizing: border-box;
+    @each $color in $colors {
+        $name: nth($color,1);
+        $value: nth($color,2);
+        $forecolor: nth($color,3);
+        &.alert-#{$name} {
+            border-color: darken($value,5%);
+            background-color: lighten($value,5%);
+            color: $forecolor;
+        }
+    }
+    &:before {
+        margin-left: 5px;
+        font-size: 24px;
+    }
+}

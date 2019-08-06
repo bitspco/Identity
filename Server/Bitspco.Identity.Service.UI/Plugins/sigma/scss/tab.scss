@@ -1,0 +1,49 @@
+.tab {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding:0;
+    margin:0;
+    >* {
+        position: relative;
+        display: flex;
+        white-space: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        transition: background-color 200ms ease,color 200ms ease;
+
+        &:not([class^="col-"]):not([class*=" col-"]) {flex: 1;}
+        &:hover {background-color: rgba(230, 230, 230, 0.4);}
+        &::after {
+            position: absolute;
+            content: '';
+            top: calc(100% - 2px);
+            right: 50%;
+            transform: translateX(50%);
+            height: 2px;
+            width: 0;
+            border-radius: 6px;
+            transition: width 300ms ease;
+        }
+        &.active::after {
+            width: 100%;
+        }
+        a{
+            display: block;
+            width:100%;
+            text-align: center;
+            padding:15px 30px;
+        }
+    }
+    @each $color in $colors {
+        $name: nth($color,1);
+        $value: nth($color,2);
+        $forecolor: nth($color,3);
+        &.tab-#{$name}-light>*::after {background-color: lighten($value,10%) !important;}
+        &.tab-#{$name}>*::after {background-color: $value !important;}
+        &.tab-#{$name}-dark>*::after {background-color: darken($value,10%) !important;} 
+    }
+}

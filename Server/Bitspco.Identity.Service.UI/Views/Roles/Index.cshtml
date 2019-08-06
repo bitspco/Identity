@@ -1,0 +1,16 @@
+﻿<h2>لیست نقش ها</h2>
+<hr />
+<div id="grid"></div>
+@{
+    Html.RenderPartial("Create");
+    Html.RenderPartial("Detail");
+    Html.RenderPartial("Edit");
+    Html.RenderPartial("Delete");
+    Html.RenderPartial("Users");
+    Html.RenderPartial("Permissions");
+    Html.RenderPartial("Members");
+    Html.RenderPartial("Parents");
+}
+@section Scripts {
+    <script src="~/Scripts/Roles.js"></script>
+}
